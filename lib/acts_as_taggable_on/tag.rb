@@ -63,6 +63,10 @@ module ActsAsTaggableOn
       read_attribute(:count).to_i
     end
 
+    def count=(val)
+      write_attribute(:count, val.to_i)
+    end
+
     class << self
       private
         def like_operator
